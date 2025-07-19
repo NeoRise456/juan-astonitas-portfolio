@@ -14,8 +14,16 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Juan Astonitas Portfolio",
-  description: "Software Engineer, Full Stack Developer, and Martial Arts Enthusiast",
+    title: "Juan Astonitas Portfolio",
+    description: "Software Engineer, Im the best at what I do",
+    keywords: [
+        "Juan Astonitas",
+        "Software Engineer",
+        "Software Engineering",
+        "Portfolio",
+        "Web Development"
+    ],
+    authors: [{ name: "Juan Astonitas" }],
 };
 
 export default function RootLayout({
