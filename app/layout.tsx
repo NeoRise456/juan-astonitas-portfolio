@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import {ThemeProvider} from "@/components/theme-provider";
+import PortfolioFooter from "@/components/generic/portfolio-footer";
+import PortfolioHeader from "@/components/generic/portfolio-header";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -42,14 +44,12 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
       >
-          <div className={`grid min-h-dvh grid-rows-[auto_1fr_auto] `}>
-              <header className={`mx-auto max-w-2xl px-4 py-2`}> this is a header</header>
+          <div className={`grid min-h-dvh grid-rows-[auto_1fr_auto] bg-white dark:bg-black `}>
+              <PortfolioHeader/>
               <main className={`mx-auto max-w-2xl px-4 py-8`}>
                   {children}
               </main>
-              <footer className={`mx-auto max-w-2xl px-4 py-2`}>
-                  this is a footer
-              </footer>
+              <PortfolioFooter/>
           </div>
       </ThemeProvider>
       </body>

@@ -1,13 +1,15 @@
-import localFont from "next/font/local";
 
-const evaFont = localFont({
-    src: "../fonts/NIS-JTC-Win-M9.ttf",
-    variable: "--font-geist-eva",
-})
+import UserPresentationSection from "@/components/user-presentation/user-presentation-section";
+import MainTechnologiesSection from "@/components/tecnologies/main-technologies-section";
+import EmploymentSection from "@/components/employment/employment-section";
+
+
 export default function Home() {
   return (
-    <>
-      my portfolio
-    </>
+    <div>
+        <UserPresentationSection/>
+        <EmploymentSection/>
+        <MainTechnologiesSection/>
+    </div>
   );
 }
