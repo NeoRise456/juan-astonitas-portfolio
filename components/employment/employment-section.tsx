@@ -34,44 +34,45 @@ const employmentList = [
             { icon: BiLogoMicrosoft , label: "React"},
             { icon: SiGooglemeet , label: "TypeScript" },
         ]
-    },
-    {
-        company: "Papaya Tutor",
-        position: "Tutor",
-        modality: "Remote",
-        startDate: "2025",
-        endDate: "2024",
-        description: "Proficiently delivered Reading and Mathematics instruction to American children (ages 8-14) at Papaya, a startup focused on supplementary education. Conducted classes exclusively in English, creating a dynamic curriculum to complement students school learning.",
-        technologies: [
-            { icon: BiLogoMicrosoft , label: "React"},
-            { icon: SiGooglemeet , label: "TypeScript" },
-        ]
     }
 ]
 
 export default function EmploymentSection(){
 
     const [open, setOpen] = useState(false);
+    const [showCards, setShowCards] = useState(false);
+
+    const handleToggle = () => {
+        if (!open) {
+            setShowCards(true);
+            setOpen(true);
+        } else {
+            setOpen(false);
+            setTimeout(() => setShowCards(false), (employmentList.length -1 ) * 100 );
+        }
+    };
 
     return (
         <div className={`relative mb-8`}>
             <h2 className={`mb-3 text-sm uppercase tracking-wider`}>Last Position</h2>
             <MainEmploymentCard employment={employmentList[0]}/>
 
-            <div className={`flex items-center mb-4`} onClick={()=> setOpen(!open)}>
-                <IoIosArrowDown className={`mr-2 transition-transform ease-in-out duration-150 ${open && "rotate-90"}`} size={12}/>
-                <span className={`text-xs`}>Previous Experience</span>
+            <div className={`flex`}>
+                <div className={`flex items-center mb-4`} onClick={handleToggle}>
+                    <IoIosArrowDown className={`mr-2 transition-transform ease-in-out duration-150 ${open && "rotate-90"}`} size={12}/>
+                    <span className={`text-xs`}>Previous Experience</span>
+                </div>
             </div>
 
-            <div className={`grid transition-[grid-template-rows] duration-300 ease-in-out ${open ? "grid-rows-[1fr]" : "grid-rows-[0fr]"}`}>
+            <div className={`grid transition-[grid-template-rows] duration-300 ease-in-out ${showCards ? "grid-rows-[1fr]" : "grid-rows-[0fr]"}`}>
                 <div className="overflow-hidden">
                     <div className="space-y-6 pl-6 pt-2">
                         {employmentList.slice(1).map((employment, index) => (
                             <PastEmploymentCard
                                 key={index}
                                 employment={employment}
-                                className={`${open && `animate-fade-right` } animate-ease-in-out animate-duration-300`}
-                                style={{ animationDelay: `${index * 100}ms` }}
+                                className={open ? `animate-fade-right animate-ease-in-out animate-duration-300` : `animate-fade-right-reverse`}
+                                style={{ animationDelay: `${ open ? (index * 100) : ((employmentList.length - index - 1)  * 100 ) }ms` }}
                             />
                         ))}
                     </div>

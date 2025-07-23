@@ -53,6 +53,19 @@
     }
   }
 
+  --animate-fade-right-reverse:fade-right-reverse 300ms ease-in-out;
+
+  @keyframes fade-right-reverse {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-2rem);
+  }
+}
+
 
 }
 
