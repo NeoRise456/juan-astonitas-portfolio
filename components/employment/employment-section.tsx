@@ -39,6 +39,7 @@ const employmentList = [
 
 export default function EmploymentSection(){
 
+    //TODO: refactor names of states
     const [open, setOpen] = useState(false);
     const [showCards, setShowCards] = useState(false);
 
