@@ -28,7 +28,7 @@ export default function MainEmploymentCard({employment} : {
             <div className={`flex gap-1`}>
                 {employment.technologies.map((tech, index) => (
                     <span key={index} className="flex items-center">
-                        <tech.icon size={16}/>
+                        <tech.icon size={20}/>
                     </span>
                 ))}
             </div>

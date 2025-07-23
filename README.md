@@ -10,9 +10,5 @@ my presentation as a software engineer. feel free to take me as an inspo for you
 - white mode
 - spanish version
 - employment history
-- add socials
-- header design
-- footer design
 - background animation
 - more animations
-- carrusel be kind be real be human
