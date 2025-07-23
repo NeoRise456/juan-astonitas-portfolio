@@ -6,7 +6,7 @@ import {
     BiLogoDocker,
     BiLogoReact,
     BiLogoPostgresql,
-    BiLogoGit
+    BiLogoGit, BiLogoPython
 } from "react-icons/bi";
 import {RiNextjsFill} from "react-icons/ri";
 
@@ -18,7 +18,7 @@ const technologies = [
     { icon: BiLogoPostgresql, label: "PostgreSQL" },
     { icon: BiLogoDocker, label: "Docker" },
     { icon: BiLogoReact , label: "React"},
-    { icon: BiLogoGit , label: "Git"},
+    { icon: BiLogoPython , label: "Python"},
 ];
 
 export default function MainTechnologiesSection(){

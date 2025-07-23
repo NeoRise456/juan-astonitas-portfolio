@@ -1,3 +1,8 @@
+import {
+    Tooltip,
+    TooltipContent,
+    TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 
 export default function MainEmploymentCard({employment} : {
@@ -27,9 +32,16 @@ export default function MainEmploymentCard({employment} : {
             <p className={`text-xs font-light mb-2 `}> {employment.description}</p>
             <div className={`flex gap-1`}>
                 {employment.technologies.map((tech, index) => (
-                    <span key={index} className="flex items-center">
-                        <tech.icon size={20}/>
-                    </span>
+                    <Tooltip key={index}>
+                        <TooltipTrigger asChild>
+                            <span  className="flex items-center">
+                                <tech.icon size={20}/>
+                            </span>
+                        </TooltipTrigger>
+                        <TooltipContent>
+                            <span>{tech.label}</span>
+                        </TooltipContent>
+                    </Tooltip>
                 ))}
             </div>
         </div>

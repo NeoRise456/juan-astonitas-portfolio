@@ -16,7 +16,7 @@ export default function UserPresentationSection(){
             <div>
                 <h1 className={`text-3xl font-bold`}>Hi, I am Juan Astonitas.</h1>
                 <p className={`text-muted-foreground text-sm mb-2`}>
-                    a Software Engineer, specialized in leading teams into building web applications, services and
+                    a Software Engineer, specialized in building detailed web applications, services and
                     automations.
                 </p>
                 <span className={`font-medium`}> Lima, Peru. </span>

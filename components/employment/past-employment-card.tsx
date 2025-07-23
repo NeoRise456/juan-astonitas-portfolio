@@ -1,5 +1,6 @@
 import React from "react";
 import {cn} from "@/lib/utils";
+import {Tooltip, TooltipContent, TooltipTrigger} from "@/components/ui/tooltip";
 
 export default function PastEmploymentCard({employment,style,className} : {
     employment: {
@@ -29,9 +30,16 @@ export default function PastEmploymentCard({employment,style,className} : {
             <p className={`text-xs font-light mb-2 `}> {employment.description}</p>
             <div className={`flex gap-1`}>
                 {employment.technologies.map((tech, index) => (
-                    <span key={index} className="flex items-center">
-                        <tech.icon size={16}/>
-                    </span>
+                    <Tooltip key={index}>
+                        <TooltipTrigger asChild>
+                            <span  className="flex items-center">
+                                <tech.icon size={20}/>
+                            </span>
+                        </TooltipTrigger>
+                        <TooltipContent>
+                            <span>{tech.label}</span>
+                        </TooltipContent>
+                    </Tooltip>
                 ))}
             </div>
         </div>

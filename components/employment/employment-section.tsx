@@ -31,8 +31,8 @@ const employmentList = [
         endDate: "2024",
         description: "Proficiently delivered Reading and Mathematics instruction to American children (ages 8-14) at Papaya, a startup focused on supplementary education. Conducted classes exclusively in English, creating a dynamic curriculum to complement students school learning.",
         technologies: [
-            { icon: BiLogoMicrosoft , label: "React"},
-            { icon: SiGooglemeet , label: "TypeScript" },
+            { icon: BiLogoMicrosoft , label: "Microsoft 365"},
+            { icon: SiGooglemeet , label: "Google Meet" },
         ]
     }
 ]
@@ -49,7 +49,7 @@ export default function EmploymentSection(){
             setOpen(true);
         } else {
             setOpen(false);
-            setTimeout(() => setShowCards(false), (employmentList.length -1 ) * 100 );
+            setTimeout(() => setShowCards(false), (employmentList.length -1 ) * 80 );
         }
     };
 
