@@ -29,7 +29,7 @@ const employmentList = [
         modality: "Remote",
         startDate: "2025",
         endDate: "2024",
-        description: "Proficiently delivered Reading and Mathematics instruction to American children (ages 8-14) at Papaya, a startup focused on supplementary education. Conducted classes exclusively in English, creating a dynamic curriculum to complement students school learning.",
+        description: "Proficiently delivered Reading and Mathematics instruction to American children (ages 8-14) at Papaya, a startup focused on supplementary education.",
         technologies: [
             { icon: BiLogoMicrosoft , label: "Microsoft 365"},
             { icon: SiGooglemeet , label: "Google Meet" },
