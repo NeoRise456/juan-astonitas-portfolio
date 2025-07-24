@@ -9,7 +9,7 @@ export default function UserPresentationSection(){
     const t = useTranslations('User');
 
     return(
-        <div className={`mb-8`}>
+        <section className={`mb-8`}>
             <div className={`flex items-center gap-6`}>
                 <div className={`relative`}>
                     <div className={`relative w-25 h-25 rounded-full overflow-hidden `}>
@@ -45,6 +45,6 @@ export default function UserPresentationSection(){
                 </div>
 
             </div>
-        </div>
+        </section>
     );
 }

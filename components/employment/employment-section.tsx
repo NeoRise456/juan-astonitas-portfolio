@@ -54,7 +54,7 @@ export default function EmploymentSection(){
     };
 
     return (
-        <div className={`relative mb-8`}>
+        <section className={`relative mb-8`}>
             <h2 className={`mb-3 text-sm uppercase tracking-wider`}>Last Position</h2>
             <MainEmploymentCard employment={employmentList[0]}/>
 
@@ -79,6 +79,6 @@ export default function EmploymentSection(){
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     );
 }

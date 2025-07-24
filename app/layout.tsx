@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
-import { Geist_Mono } from "next/font/google";
+import {Geist, Geist_Mono} from "next/font/google";
 import "./globals.css";
 import {ThemeProvider} from "@/components/theme-provider";
 import PortfolioFooter from "@/components/generic/portfolio-footer";
 import PortfolioHeader from "@/components/generic/portfolio-header";
 import {NextIntlClientProvider} from 'next-intl';
-
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
