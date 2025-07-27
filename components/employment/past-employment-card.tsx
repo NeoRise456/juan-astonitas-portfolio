@@ -20,7 +20,7 @@ export default function PastEmploymentCard({employment,style,className} : {
             <div className={`flex justify-between items-start mb-1`}>
                 <div className={``}>
                     <h3 className={`text-md font-bold `}> {employment.position} </h3>
-                    <p className={`text-xs font-normal uppercase tracking-wider`}>{employment.startDate} - {employment.endDate}</p>
+                    <p className={`text-xs font-normal uppercase tracking-wider text-muted-foreground`}>{employment.startDate} - {employment.endDate}</p>
                 </div>
                 <div className={`text-right`}>
                     <p className={`text-xs`}> {employment.company}</p>

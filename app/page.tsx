@@ -3,7 +3,7 @@ import UserPresentationSection from "@/components/user-presentation/user-present
 import MainTechnologiesSection from "@/components/tecnologies/main-technologies-section";
 import EmploymentSection from "@/components/employment/employment-section";
 import UserProjectsSection from "@/components/user-projects/user-projects-section";
-import WorkProjectsSection from "@/components/work-projects/work-projects-section";
+import WorkProjectsSection from "@/components/user-projects/work-projects-section";
 
 
 export default function Home() {

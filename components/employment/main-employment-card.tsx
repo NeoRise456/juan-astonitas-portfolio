@@ -22,7 +22,7 @@ export default function MainEmploymentCard({employment} : {
             <div className={`flex justify-between items-start mb-2`}>
                 <div className={``}>
                     <h3 className={`text-md md:text-2xl font-bold `}> {employment.position} </h3>
-                    <p className={`text-xs font-normal uppercase tracking-wider text-black-400 dark:text-black-400`}>{employment.startDate} - {employment.endDate}</p>
+                    <p className={`text-xs font-normal uppercase tracking-wider text-muted-foreground`}>{employment.startDate} - {employment.endDate}</p>
                 </div>
                 <div className={`text-right`}>
                     <p className={`text-sm `}> {employment.company}</p>
