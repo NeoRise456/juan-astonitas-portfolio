@@ -32,8 +32,6 @@ export default function MainTechnologiesSection(){
                             key={index}
                             icon={technology.icon}
                             label={technology.label}
-                            className={`animate-fade-up animate-duration-300 animate-ease-in-out`}
-                            style={{ animationDelay: `${index * 100}ms` }}
                         />
                     ))
                 }

@@ -2,9 +2,7 @@ import type { NextConfig } from "next";
 import createNextIntlPlugin from 'next-intl/plugin';
 
 const nextConfig: NextConfig = {
-    experimental: {
-        viewTransition: true,
-    },
+    /* drop ur config here */
 };
 
 const withNextIntl = createNextIntlPlugin();
