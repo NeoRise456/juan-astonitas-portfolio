@@ -5,8 +5,6 @@ import {ThemeProvider} from "@/components/theme-provider";
 import PortfolioFooter from "@/components/generic/portfolio-footer";
 import PortfolioHeader from "@/components/generic/portfolio-header";
 import {NextIntlClientProvider} from 'next-intl';
-import {ShootingStars} from "@/components/ui/shooting-stars";
-import {StarsBackground} from "@/components/ui/stars-background";
 import PortfolioBackground from "@/components/generic/portfolio-background";
 
 const geistMono = Geist_Mono({
