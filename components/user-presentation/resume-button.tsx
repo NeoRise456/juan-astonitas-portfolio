@@ -1,11 +1,14 @@
-'use client';
+"use client";
 
 import {LuDownload} from "react-icons/lu";
 import {Button} from "@/components/ui/button";
 import type { MouseEvent } from 'react';
+import {useTranslations} from "next-intl";
 
 
 export default function ResumeButton(){
+
+    const t = useTranslations('User')
 
     const handleDownload = (e: MouseEvent<HTMLButtonElement>) => {
         e.preventDefault();
@@ -20,7 +23,7 @@ export default function ResumeButton(){
     return (
         <Button size={`sm`} className={`h-[26px] transition-transform ease-in-out duration-150 hover:scale-110`} onClick={handleDownload}>
             <LuDownload />
-            <span className={`text-xs`}> Resume </span>
+            <span className={`text-xs`}> {t('cv')} </span>
         </Button>
     );
 }

@@ -1,5 +1,27 @@
 {
+  "Header" : {
+    "available": "available for ",
+    "work": "work"
+  },
   "User": {
-    "greeting": "Hi"
+    "greeting": "Hi, I am",
+    "description": "a 21yr old Software Engineer, specialized in building detailed web applications, services and automations.",
+    "cv": "Resume (en)"
+  },
+  "Employment" : {
+    "title": "Last Position",
+    "subtitle": "Previous Experience"
+  },
+  "Work" : {
+    "title" : "Work",
+    "subtitle" : "projects i was hired to do/work on"
+  },
+  "Projects" : {
+    "title" : "Projects",
+    "subtitle" : "i like to code stuff :D"
+  },
+  "Technologies": {
+    "title": "Technologies",
+    "more": "and more..."
   }
 }

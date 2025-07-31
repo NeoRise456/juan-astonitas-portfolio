@@ -1,4 +1,7 @@
+"use server";
+
 import ProjectDialog from "@/components/user-projects/project-dialog";
+import {getTranslations} from "next-intl/server";
 
 
 const userProjects = [
@@ -32,12 +35,15 @@ const userProjects = [
 ]
 
 
-export default function UserProjectsSection(){
+export default async function UserProjectsSection(){
+
+    const t = await getTranslations('Projects');
+
     return (
         <div className={`relative mb-8`}>
             <div className={`mb-3`}>
-                <h2 className={`text-sm uppercase tracking-wider `}>My Projects</h2>
-                <p className={`text-muted-foreground text-xs`}> i like to code stuff </p>
+                <h2 className={`text-sm uppercase tracking-wider `}>{t('title')}</h2>
+                <p className={`text-muted-foreground text-xs`}> {t('subtitle')} </p>
             </div>
             <div className={`grid grid-cols-1 sm:grid-cols-3 gap-1`}>
                 {

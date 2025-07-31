@@ -1,12 +1,14 @@
+"use server";
+
 import Image from "next/image";
 import {FiGithub, FiLinkedin} from "react-icons/fi";
 import {MdMailOutline} from "react-icons/md";
 import ResumeButton from "@/components/user-presentation/resume-button";
-import {useTranslations} from 'next-intl';
+import {getTranslations} from "next-intl/server";
 
-export default function UserPresentationSection(){
+export default async function UserPresentationSection(){
 
-    const t = useTranslations('User');
+    const t = await getTranslations('User');
 
     return(
         <section className={`mb-8`}>
@@ -22,10 +24,9 @@ export default function UserPresentationSection(){
                     </div>
                 </div>
                 <div>
-                    <h1 className={`text-3xl font-bold`}>{t('greeting')}, I am Juan Astonitas.</h1>
+                    <h1 className={`text-3xl font-bold`}>{t('greeting')} Juan Astonitas.</h1>
                     <p className={`text-muted-foreground text-sm mb-2`}>
-                        a Software Engineer, specialized in building detailed web applications, services and
-                        automations.
+                        {t('description')}
                     </p>
                     <span className={`font-medium`}> Lima, Peru. </span>
                 </div>

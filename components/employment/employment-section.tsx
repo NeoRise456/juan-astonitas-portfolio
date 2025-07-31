@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import {RiNextjsFill} from "react-icons/ri";
 import {BiLogoMicrosoft, BiLogoReact, BiLogoTailwindCss, BiLogoTypescript} from "react-icons/bi";
@@ -7,6 +7,7 @@ import { IoIosArrowDown } from "react-icons/io";
 import MainEmploymentCard from "@/components/employment/main-employment-card";
 import {useState} from "react";
 import PastEmploymentCard from "@/components/employment/past-employment-card";
+import {useTranslations} from "next-intl";
 
 const employmentList = [
     {
@@ -39,6 +40,8 @@ const employmentList = [
 
 export default function EmploymentSection(){
 
+    const t = useTranslations('Employment')
+
     //TODO: refactor names of states
     const [open, setOpen] = useState(false);
     const [showCards, setShowCards] = useState(false);
@@ -55,13 +58,13 @@ export default function EmploymentSection(){
 
     return (
         <section className={`relative mb-8`}>
-            <h2 className={`mb-3 text-sm uppercase tracking-wider`}>Last Position</h2>
+            <h2 className={`mb-3 text-sm uppercase tracking-wider`}>{t('title')}</h2>
             <MainEmploymentCard employment={employmentList[0]}/>
 
             <div className={`flex`}>
                 <div className={`flex items-center mb-4`} onClick={handleToggle}>
                     <IoIosArrowDown className={`mr-2 transition-transform ease-in-out duration-150 ${open && "rotate-90"}`} size={12}/>
-                    <span className={`text-xs`}>Previous Experience</span>
+                    <span className={`text-xs`}>{t('subtitle')}</span>
                 </div>
             </div>
 

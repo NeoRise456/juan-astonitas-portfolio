@@ -1,5 +1,27 @@
 {
+  "Header" : {
+    "available": "disponible para ",
+    "work": "trabajo"
+  },
   "User": {
-    "greeting": "Hola p"
+    "greeting": "Hola, soy",
+    "description": "ingeniero de software de 21 años, especializado en el desarrollo de aplicaciones web, servicios y automatizaciones.",
+    "cv": "Currículum (es)"
+  },
+  "Employment" : {
+    "title": "Experiencia",
+    "subtitle": "Experiencia Previa"
+  },
+  "Work" : {
+    "title" : "Mi Trabajo",
+    "subtitle" : "proyectos en los que fui contratado para desarrollar"
+  },
+  "Projects" : {
+    "title" : "Mis Proyectos",
+    "subtitle" : "me gusta programar :D"
+  },
+  "Technologies": {
+    "title": "Tecnologías",
+    "more": "y más..."
   }
 }

@@ -14,7 +14,11 @@ export default function PortfolioBackground(){
         <div className={`-z-10 `}>
             {/* idk  but it worked lmao */}
             <LazyShootingStars theme={theme}/>
-            <StarsBackground className={`-z-10 `} theme={theme} style={{ minHeight: "calc(100dvh * 2)" }}/>
+            <StarsBackground
+                className={`-z-10 `}
+                theme={theme}
+                style={{ minHeight: "calc(100dvh * 2)" }}
+            />
         </div>
     );
 }

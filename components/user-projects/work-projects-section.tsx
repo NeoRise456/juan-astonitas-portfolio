@@ -1,5 +1,7 @@
+"use server";
 
 import ProjectDialog from "@/components/user-projects/project-dialog";
+import {getTranslations} from "next-intl/server";
 
 
 const workProjects = [
@@ -30,13 +32,15 @@ const workProjects = [
     }
 ]
 
-export default function WorkProjectsSection(){
+export default async function WorkProjectsSection(){
+
+    const t = await getTranslations('Work');
 
     return (
         <section className={`relative mb-8`}>
             <div className={`mb-3`}>
-                <h2 className={`text-sm uppercase tracking-wider `}>My Work</h2>
-                <p className={`text-muted-foreground text-xs`}> projects i was hired to do/work on </p>
+                <h2 className={`text-sm uppercase tracking-wider `}>{t('title')}</h2>
+                <p className={`text-muted-foreground text-xs`}> {t('subtitle')} </p>
             </div>
 
 

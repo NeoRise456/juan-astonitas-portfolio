@@ -13,7 +13,7 @@ const evaFont = localFont({
 
 export default function PortfolioFooter(){
     return (
-        <footer className={`mx-auto max-w-2xl py-2 border-x border-t rounded-t-2xl border-zinc-800 w-full overflow-hidden`}>
+        <footer className={`mx-auto max-w-2xl py-2 border-x border-t rounded-t-2xl border-zinc-800 w-full overflow-hidden backdrop-blur-[1px]`}>
             <div className={`flex flex-row items-center justify-between mb-2 px-4`}>
                 <div className={`flex flex-row items-center gap-2 `}>
                     <FiGithub

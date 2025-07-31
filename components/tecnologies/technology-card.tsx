@@ -20,7 +20,7 @@ export default function TechnologyCard({ icon: Icon, label ,className , style }:
     const hoverClass = colorMap[label] ?? "group-hover:fill-current";
 
     return (
-        <div className={cn(`border text-card-foreground shadow overflow-hidden rounded-md transition-all duration-150 backdrop-blur-sm border-zinc-800 bg-zinc-900/30 hover:bg-zinc-900/50 group`,className)}
+        <div className={cn(`border text-card-foreground shadow overflow-hidden rounded-md transition-all duration-150 backdrop-blur-sm border-zinc-200 bg-zinc-100/30 hover:bg-zinc-900/50 group bg-zinc-100/30 dark:border-zinc-800 dark:bg-zinc-900/30`,className)}
              style={{...style}}>
 
             <div className={`relative aspect-square flex flex-col items-center justify-center p-2 overflow-visible `}>
