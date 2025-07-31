@@ -44,7 +44,7 @@ export default function RootLayout({
           disableTransitionOnChange
       >
 
-          <div className={`grid min-h-dvh grid-rows-[auto_1fr_auto] relative`}>
+          <div className={`grid min-h-dvh grid-rows-[auto_1fr_auto] relative overflow-hidden`}>
               <NextIntlClientProvider>
                   <PortfolioHeader/>
                   <main className={`mx-auto max-w-2xl px-4 py-8`}>
