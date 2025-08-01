@@ -38,7 +38,7 @@ export default function ProjectDialog({project} : {
             <DialogTrigger asChild>
                 <ProjectCard project={project} />
             </DialogTrigger>
-            <DialogContent className={`grid grid-cols-2 p-0 gap-0 max-w-2xl`}>
+            <DialogContent className={`grid grid-cols-2 p-0 gap-0 max-w-7/8 md:max-w-2xl`}>
                 <div className={`relative  overflow-hidden rounded-l-lg border-r`}>
                     <Image
                         src={project.img}

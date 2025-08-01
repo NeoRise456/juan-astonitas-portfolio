@@ -2,28 +2,20 @@
 
 import {LuDownload} from "react-icons/lu";
 import {Button} from "@/components/ui/button";
-import type { MouseEvent } from 'react';
 import {useTranslations} from "next-intl";
-
+import Link from "next/link";
 
 export default function ResumeButton(){
 
     const t = useTranslations('User')
 
-    const handleDownload = (e: MouseEvent<HTMLButtonElement>) => {
-        e.preventDefault();
-        const link = document.createElement('a');
-        link.href = '/me.png';
-        link.download = 'me.png';
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-    };
 
     return (
-        <Button size={`sm`} className={`h-[26px] transition-transform ease-in-out duration-150 hover:scale-110`} onClick={handleDownload}>
-            <LuDownload />
-            <span className={`text-xs`}> {t('cv')} </span>
+        <Button size={`sm`} className={`h-[26px] transition-transform ease-in-out duration-150 hover:scale-105`} asChild>
+            <Link href={t('cvLink')} target={`_blank`}>
+                <LuDownload />
+                <span className={`text-xs`}> {t('cv')} </span>
+            </Link>
         </Button>
     );
 }

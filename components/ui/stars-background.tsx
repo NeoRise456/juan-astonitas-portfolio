@@ -15,7 +15,11 @@ interface StarProps {
   radius: number;
   opacity: number;
   twinkleSpeed: number | null;
-  fadeInProgress: number; // Add this to track fade-in progress (0-1)
+  fadeInProgress: number;
+  // Add orbit properties
+  orbitRadius: number;
+  orbitSpeed: number;
+  initialAngle: number;
 }
 
 interface StarBackgroundProps {
@@ -60,6 +64,10 @@ export const StarsBackground: React.FC<StarBackgroundProps> = ({
               Math.random() * (maxTwinkleSpeed - minTwinkleSpeed)
             : null,
           fadeInProgress: 0, // Initialize to 0 (fully transparent)
+          // Initialize orbit properties
+          orbitRadius: Math.random() * 3 + 1, // Random orbit radius between 1-4px
+          orbitSpeed: Math.random() * 0.0005 + 0.0005, // Random speed
+          initialAngle: Math.random() * Math.PI * 2, // Random starting angle
         };
       });
     },
@@ -141,8 +149,13 @@ export const StarsBackground: React.FC<StarBackgroundProps> = ({
         // Apply the fade-in progress
         currentOpacity *= star.fadeInProgress;
 
+        // Calculate orbital position
+        const angle = star.initialAngle + currentTime * star.orbitSpeed;
+        const orbitalX = star.x + Math.cos(angle) * star.orbitRadius;
+        const orbitalY = star.y + Math.sin(angle) * star.orbitRadius;
+
         ctx.beginPath();
-        ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
+        ctx.arc(orbitalX, orbitalY, star.radius, 0, Math.PI * 2);
         ctx.fillStyle = theme === 'dark'
           ? `rgba(255, 255, 255, ${currentOpacity})`
           : `rgba(0, 0, 0, ${currentOpacity})`;

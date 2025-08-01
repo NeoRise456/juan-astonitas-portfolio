@@ -10,7 +10,7 @@ export default function ThemeToggleButton(){
     const { theme, setTheme } = useTheme();
 
     return (
-        <Button size={`icon`} variant={`default`} onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>
+        <Button size={`icon`} variant={`default`} className={`cursor-pointer`} onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>
             <CgDarkMode size={80}/>
         </Button>
     );

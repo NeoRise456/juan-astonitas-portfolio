@@ -1,7 +1,14 @@
 "use client";
 
 import {RiNextjsFill} from "react-icons/ri";
-import {BiLogoMicrosoft, BiLogoReact, BiLogoTailwindCss, BiLogoTypescript} from "react-icons/bi";
+import {
+    BiLogoAngular, BiLogoDocker,
+    BiLogoMicrosoft,
+    BiLogoReact,
+    BiLogoSpringBoot,
+    BiLogoTailwindCss,
+    BiLogoTypescript
+} from "react-icons/bi";
 import { SiGooglemeet } from "react-icons/si";
 import { IoIosArrowDown } from "react-icons/io";
 import MainEmploymentCard from "@/components/employment/main-employment-card";
@@ -9,36 +16,38 @@ import {useState} from "react";
 import PastEmploymentCard from "@/components/employment/past-employment-card";
 import {useTranslations} from "next-intl";
 
-const employmentList = [
-    {
-        company: "Intercert Latam",
-        position: "Software Engineer Intern",
-        modality: "On Site",
-        startDate: "January 2025",
-        endDate: "April 2025",
-        description: "Development of websites and web applications using React, TypeScript, and Next.js. Led Multifunctional Technical Audits of outsourced projects, trained internal teams on technological tools, and provided strategic consulting for IT infrastructure decisions.",
-        technologies: [
-            { icon: RiNextjsFill , label: "Next.js" },
-            { icon: BiLogoReact , label: "React"},
-            { icon: BiLogoTypescript, label: "TypeScript" },
-            { icon: BiLogoTailwindCss, label: "Tailwind" },
-        ]
-    },
-    {
-        company: "Papaya Tutor",
-        position: "Tutor",
-        modality: "Remote",
-        startDate: "2025",
-        endDate: "2024",
-        description: "Proficiently delivered Reading and Mathematics instruction to American children (ages 8-14) at Papaya, a startup focused on supplementary education.",
-        technologies: [
-            { icon: BiLogoMicrosoft , label: "Microsoft 365"},
-            { icon: SiGooglemeet , label: "Google Meet" },
-        ]
-    }
-]
+
 
 export default function EmploymentSection(){
+
+    const employmentList = [
+        {
+            company: "Intercert Latam",
+            position: "Software Engineer Intern",
+            modality: "On Site",
+            startDate: "January 2025",
+            endDate: "April 2025",
+            description: "Development of websites and web applications using React, TypeScript, and Next.js. Led Multifunctional Technical Audits of outsourced projects, trained internal teams on technological tools, and provided strategic consulting for IT infrastructure decisions.",
+            technologies: [
+                { icon: RiNextjsFill , label: "Next.js" },
+                { icon: BiLogoReact , label: "React"},
+                { icon: BiLogoTypescript, label: "TypeScript" },
+                { icon: BiLogoTailwindCss, label: "Tailwind" },
+            ]
+        },
+        {
+            company: "Papaya Tutor",
+            position: "Tutor",
+            modality: "Remote",
+            startDate: "2024",
+            endDate: "2025",
+            description: "Proficiently delivered Reading and Mathematics instruction to American children (ages 8-14) at Papaya, a startup focused on supplementary education.",
+            technologies: [
+                { icon: BiLogoMicrosoft , label: "Microsoft 365"},
+                { icon: SiGooglemeet , label: "Google Meet" },
+            ]
+        }
+    ]
 
     const t = useTranslations('Employment')
 
@@ -62,7 +71,7 @@ export default function EmploymentSection(){
             <MainEmploymentCard employment={employmentList[0]}/>
 
             <div className={`flex`}>
-                <div className={`flex items-center mb-4`} onClick={handleToggle}>
+                <div className={`flex items-center mb-4 cursor-pointer`} onClick={handleToggle}>
                     <IoIosArrowDown className={`mr-2 transition-transform ease-in-out duration-150 ${open && "rotate-90"}`} size={12}/>
                     <span className={`text-xs`}>{t('subtitle')}</span>
                 </div>

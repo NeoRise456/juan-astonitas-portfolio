@@ -20,9 +20,8 @@ export default function ProjectCard({project} : {
     }
 }){
     return (
-        <div
-            className={`border text-card-foreground shadow overflow-hidden border-zinc-200 rounded-md bg-zinc-100/30 backdrop-blur-sm dark:border-zinc-800 dark:bg-zinc-900/30`}
-        >
+        <div className={`border text-card-foreground overflow-hidden border-zinc-200 rounded-md bg-zinc-100/30` +
+                `backdrop-blur-xl dark:border-zinc-800 dark:bg-zinc-900/30 cursor-pointer transition-transform ease-in-out duration-150 hover:-translate-y-0.5`}>
             <div className={`p-0`}>
                 <div className={`relative aspect-[16/9] overflow-hidden`}>
                     <Image

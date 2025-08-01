@@ -24,10 +24,10 @@ export default function LanguageToggleButton(){
     return (
         <ToggleGroup type="single" variant="outline" value={lang}
                      aria-label="Language Toggle" onValueChange={handleLocaleChange} >
-            <ToggleGroupItem value="es" aria-label="Toggle Spanish">
+            <ToggleGroupItem value="es" aria-label="Toggle Spanish" className={`cursor-pointer`}>
                 <span> es </span>
             </ToggleGroupItem>
-            <ToggleGroupItem value="en" aria-label="Toggle English">
+            <ToggleGroupItem value="en" aria-label="Toggle English" className={`cursor-pointer`}>
                 <span> en </span>
             </ToggleGroupItem>
         </ToggleGroup>

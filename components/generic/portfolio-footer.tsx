@@ -2,6 +2,7 @@ import localFont from "next/font/local";
 import { MdMailOutline } from "react-icons/md";
 import { FiGithub } from "react-icons/fi";
 import { FiLinkedin } from "react-icons/fi";
+import Link from "next/link";
 
 
 const evaFont = localFont({
@@ -16,15 +17,21 @@ export default function PortfolioFooter(){
         <footer className={`mx-auto max-w-2xl py-2 border-x border-t rounded-t-2xl border-zinc-800 w-full overflow-hidden backdrop-blur-[1px]`}>
             <div className={`flex flex-row items-center justify-between mb-2 px-4`}>
                 <div className={`flex flex-row items-center gap-2 `}>
-                    <FiGithub
-                        className={`transition-all duration-150 hover:text-muted-foreground hover:scale-110`}
-                        size={20}/>
-                    <FiLinkedin
-                        className={`transition-all  duration-150 hover:text-muted-foreground hover:scale-110`}
-                        size={20}/>
-                    <MdMailOutline
-                        className={`transition-all duration-150 hover:text-muted-foreground hover:scale-110`}
-                        size={26}/>
+                    <Link href={`https://github.com/NeoRise456`} target={`_blank`}>
+                        <FiGithub
+                            className={`transition-all duration-150 hover:text-muted-foreground hover:scale-110`}
+                            size={20}/>
+                    </Link>
+                    <Link href={`https://www.linkedin.com/in/juan-diego-astonitas-5ba0b425a/`} target={`_blank`}>
+                        <FiLinkedin
+                            className={`transition-all  duration-150 hover:text-muted-foreground hover:scale-110`}
+                            size={20}/>
+                    </Link>
+                    <Link href={`https://mail.google.com/mail/?view=cm&fs=1&to=juanastonitas.dev@gmail.com`} target={`_blank`}>
+                        <MdMailOutline
+                            className={`transition-all duration-150 hover:text-muted-foreground hover:scale-110`}
+                            size={26}/>
+                    </Link>
                 </div>
                 <span className={`text-muted-foreground`}> Juan Astonitas | 2025 </span>
             </div>

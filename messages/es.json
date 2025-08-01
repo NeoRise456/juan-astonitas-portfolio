@@ -3,10 +3,15 @@
     "available": "disponible para ",
     "work": "trabajo"
   },
+  "NotFound" : {
+    "message": "oe, esta página no existe xd",
+    "button": "Ir a Inicio"
+  },
   "User": {
     "greeting": "Hola, soy",
     "description": "ingeniero de software de 21 años, especializado en el desarrollo de aplicaciones web, servicios y automatizaciones.",
-    "cv": "Currículum (es)"
+    "cv": "Currículum (es)",
+    "cvLink": "https://docs.google.com/document/d/1GSsYfkmAWx_ZlBUazLU1CH7MRAHyPYOr/edit?usp=sharing&ouid=109113853729909714454&rtpof=true&sd=true"
   },
   "Employment" : {
     "title": "Experiencia",
