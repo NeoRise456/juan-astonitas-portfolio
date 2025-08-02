@@ -1,3 +1,5 @@
+"use server";
+
 import {Geist} from "next/font/google";
 import {
     Dialog,
@@ -14,25 +16,27 @@ import {Button} from "@/components/ui/button";
 import Link from "next/link";
 import {IoArrowUpCircleOutline} from "react-icons/io5";
 import { BsCodeSlash } from "react-icons/bs";
-
-
+import {getTranslations} from "next-intl/server";
 
 const geistSans = Geist({
     variable: "--font-geist-sans",
     subsets: ["latin"],
 });
 
-export default function ProjectDialog({project} : {
+export default async function ProjectDialog({project} : {
     project: {
         name: string;
         description: string;
         shortDescription: string;
-        url: string;
+        url?: string;
         img: string;
         sourceCode?: string;
         technologies: string[];
     }
 }){
+
+    const t = await getTranslations('Projects');
+
     return (
         <Dialog>
             <DialogTrigger asChild>
@@ -65,36 +69,52 @@ export default function ProjectDialog({project} : {
                     </DialogHeader>
 
                     {
-                        project.sourceCode ?
-                            <div className={`grid grid-cols-2 gap-4`}>
-                                <Button size={`sm`}
-                                        className={`group transition-transform duration-150 ease-in-out hover:scale-105 `}
-                                        asChild>
-                                    <Link href={project.url} target={`_blank`}>
-                                        visit site
-                                        <IoArrowUpCircleOutline
-                                            className={`rotate-90 transition-all duration-150 ease-in-out group-hover:rotate-45`}/>
-                                    </Link>
-                                </Button>
-                                <Button size={`sm`}
-                                        className={`group transition-transform duration-150 ease-in-out hover:scale-105 `}
-                                        asChild>
-                                    <Link href={project.sourceCode} target={`_blank`}>
-                                        source code
-                                        <BsCodeSlash/>
-                                    </Link>
-                                </Button>
-                            </div>
-                            :
+                        project.sourceCode && project.url &&
+                        <div className={`grid grid-cols-2 gap-4`}>
                             <Button size={`sm`}
                                     className={`group transition-transform duration-150 ease-in-out hover:scale-105 `}
                                     asChild>
-                                <Link href={project.url} target={`_blank`}>
-                                    visit site
+                                <Link href={project.url} target={`_blank`} className={`text-xs`}>
+                                    {t('liveWebsite')}
                                     <IoArrowUpCircleOutline
                                         className={`rotate-90 transition-all duration-150 ease-in-out group-hover:rotate-45`}/>
                                 </Link>
                             </Button>
+                            <Button size={`sm`}
+                                    className={`group transition-transform duration-150 ease-in-out hover:scale-105 `}
+                                    asChild>
+                                <Link href={project.sourceCode} target={`_blank`} className={`text-xs`}>
+                                    {t('sourceCode')}
+                                    <BsCodeSlash/>
+                                </Link>
+                            </Button>
+                        </div>
+                    }
+
+                    {
+                        project.sourceCode && !project.url &&
+                        <Button size={`sm`}
+                                className={`group transition-transform duration-150 ease-in-out hover:scale-105 `}
+                                asChild>
+                            <Link href={project.sourceCode} target={`_blank`}>
+                                {t('sourceCode')}
+                                <BsCodeSlash/>
+                            </Link>
+                        </Button>
+                    }
+
+                    {
+                        !project.sourceCode && project.url &&
+                        <Button size={`sm`}
+                                className={`group transition-transform duration-150 ease-in-out hover:scale-105 `}
+                                asChild>
+                            <Link href={project.url} target={`_blank`}>
+                                {t('liveWebsite')}
+                                <IoArrowUpCircleOutline
+                                    className={`rotate-90 transition-all duration-150 ease-in-out group-hover:rotate-45`}/>
+                            </Link>
+                        </Button>
+
                     }
 
                 </div>

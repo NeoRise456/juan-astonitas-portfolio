@@ -2,7 +2,6 @@
 @import "tw-animate-css";
 @import "tailwindcss-animated";
 
-
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
@@ -47,6 +46,8 @@
 
   --animate-scroll-text: scroll 8s linear infinite;
 
+
+
   @keyframes scroll {
     to {
         transform: translateX(-100%);
@@ -64,6 +65,8 @@
     opacity: 0;
     transform: translateX(-2rem);
   }
+
+
 }
 
 

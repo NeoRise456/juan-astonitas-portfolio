@@ -12,12 +12,13 @@ export default function PortfolioBackground(){
 
     return (
         <div className={`-z-10 `}>
-            {/* idk  but it worked lmao */}
+            {/* lazy loading to ensure client render (cuz of the useTheme hook usage) */}
             <LazyShootingStars theme={theme}/>
             <StarsBackground
                 className={`-z-10 `}
+                starDensity={0.00007}
                 theme={theme}
-                style={{ minHeight: "calc(100dvh * 2)" }}
+                style={{ minHeight: "calc(100dvh * 3)" }}
             />
         </div>
     );

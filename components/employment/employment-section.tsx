@@ -14,20 +14,23 @@ import { IoIosArrowDown } from "react-icons/io";
 import MainEmploymentCard from "@/components/employment/main-employment-card";
 import {useState} from "react";
 import PastEmploymentCard from "@/components/employment/past-employment-card";
-import {useTranslations} from "next-intl";
+import {useLocale, useTranslations} from "next-intl";
 
 
 
 export default function EmploymentSection(){
 
-    const employmentList = [
+    const t = useTranslations('Employment');
+    const locale = useLocale();
+
+    const employmentList = locale === 'en' ? [
         {
             company: "Intercert Latam",
             position: "Software Engineer Intern",
             modality: "On Site",
             startDate: "January 2025",
             endDate: "April 2025",
-            description: "Development of websites and web applications using React, TypeScript, and Next.js. Led Multifunctional Technical Audits of outsourced projects, trained internal teams on technological tools, and provided strategic consulting for IT infrastructure decisions.",
+            description: "Development of websites and web applications using React, TypeScript, and Next.js. Led Technical Audits of outsourced projects, trained internal teams on technological tools, and provided strategic consulting for IT infrastructure decisions.",
             technologies: [
                 { icon: RiNextjsFill , label: "Next.js" },
                 { icon: BiLogoReact , label: "React"},
@@ -47,21 +50,45 @@ export default function EmploymentSection(){
                 { icon: SiGooglemeet , label: "Google Meet" },
             ]
         }
+    ] : [
+        {
+            company: "Intercert Latam",
+            position: "Ingeniero de Software Practicante",
+            modality: "Presencial",
+            startDate: "Enero 2025",
+            endDate: "Abril 2025",
+            description: "Desarrollo de sitios y aplicaciones web utilizando React, TypeScript y Next.js. Lideré Auditorías Técnicas de proyectos subcontratados, capacité a equipos internos en herramientas tecnológicas y brindé consultoría estratégica para decisiones de infraestructura de TI.",
+            technologies: [
+                { icon: RiNextjsFill , label: "Next.js" },
+                { icon: BiLogoReact , label: "React"},
+                { icon: BiLogoTypescript, label: "TypeScript" },
+                { icon: BiLogoTailwindCss, label: "Tailwind" },
+            ]
+        },
+        {
+            company: "Papaya Tutor",
+            position: "Tutor",
+            modality: "Remoto",
+            startDate: "2024",
+            endDate: "2025",
+            description: "Impartí instrucción de Lectura y Matemáticas a niños estadounidenses (de 8 a 14 años) en Papaya, una startup enfocada en educación complementaria.",
+            technologies: [
+                { icon: BiLogoMicrosoft , label: "Microsoft 365"},
+                { icon: SiGooglemeet , label: "Google Meet" },
+            ]
+        }
     ]
 
-    const t = useTranslations('Employment')
-
-    //TODO: refactor names of states
     const [open, setOpen] = useState(false);
-    const [showCards, setShowCards] = useState(false);
+    const [showExperience, setShowExperience] = useState(false);
 
     const handleToggle = () => {
         if (!open) {
-            setShowCards(true);
+            setShowExperience(true);
             setOpen(true);
         } else {
             setOpen(false);
-            setTimeout(() => setShowCards(false), (employmentList.length -1 ) * 80 );
+            setTimeout(() => setShowExperience(false), (employmentList.length -1 ) * 80 );
         }
     };
 
@@ -77,7 +104,7 @@ export default function EmploymentSection(){
                 </div>
             </div>
 
-            <div className={`grid transition-[grid-template-rows] duration-300 ease-in-out ${showCards ? "grid-rows-[1fr]" : "grid-rows-[0fr]"}`}>
+            <div className={`grid transition-[grid-template-rows] duration-300 ease-in-out ${showExperience ? "grid-rows-[1fr]" : "grid-rows-[0fr]"}`}>
                 <div className="overflow-hidden">
                     <div className="space-y-6 pl-6 pt-2">
                         {employmentList.slice(1).map((employment, index) => (

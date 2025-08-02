@@ -23,7 +23,9 @@
   },
   "Projects" : {
     "title" : "Mis Proyectos",
-    "subtitle" : "me gusta programar :D"
+    "subtitle" : "me gusta programar :D",
+    "sourceCode": "código fuente",
+    "liveWebsite": "ir a web"
   },
   "Technologies": {
     "title": "Tecnologías",

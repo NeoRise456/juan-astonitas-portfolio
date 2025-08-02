@@ -23,7 +23,9 @@
   },
   "Projects" : {
     "title" : "Projects",
-    "subtitle" : "i like to code stuff :D"
+    "subtitle" : "i like to code stuff :D",
+    "sourceCode": "source code",
+    "liveWebsite": "website"
   },
   "Technologies": {
     "title": "Technologies",

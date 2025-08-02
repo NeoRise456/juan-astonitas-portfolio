@@ -14,8 +14,9 @@ export default function ProjectCard({project} : {
         name: string;
         description: string;
         shortDescription: string;
-        url: string;
+        url?: string;
         img: string;
+        sourceCode?: string;
         technologies: string[];
     }
 }){
