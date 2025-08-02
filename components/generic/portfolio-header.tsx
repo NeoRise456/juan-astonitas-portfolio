@@ -16,8 +16,8 @@ export default async function PortfolioHeader(){
                 <Link href={`/`}>
                     <span className={`text-2xl font-semibold `}>J/A</span>
                 </Link>
-                <div className={`max-w-[112px] sm:max-w-full text-center`}>
-                    <span className={`text-xs animate-fade-down animate-duration-400 animate-delay-300`}>
+                <div className={`max-w-[112px] sm:max-w-full text-center animate-fade-down animate-duration-400 animate-delay-300`}>
+                    <span className={`text-xs `}>
                     ( {t('available')}<strong
                         className={`text-green-600 dark:text-[#69df69] animate-pulse`}>{t('work')}</strong> )
                 </span>

@@ -21,6 +21,7 @@ export default async function UserPresentationSection(){
                             alt={"literally me"}
                             fill
                             quality={100}
+                            className={`object-cover object-left rotate-270`}
                         />
                     </div>
                 </div>
