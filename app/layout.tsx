@@ -8,6 +8,7 @@ import PortfolioHeader from "@/components/generic/portfolio-header";
 import {NextIntlClientProvider} from 'next-intl';
 import PortfolioBackground from "@/components/generic/portfolio-background";
 
+
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
