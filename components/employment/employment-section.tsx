@@ -9,7 +9,7 @@ import {
     BiLogoTailwindCss,
     BiLogoTypescript
 } from "react-icons/bi";
-import { SiGooglemeet } from "react-icons/si";
+import { SiGooglemeet, SiPostgresql } from "react-icons/si";
 import { IoIosArrowDown } from "react-icons/io";
 import MainEmploymentCard from "@/components/employment/main-employment-card";
 import {useState} from "react";
@@ -24,6 +24,20 @@ export default function EmploymentSection(){
     const locale = useLocale();
 
     const employmentList = locale === 'en' ? [
+        {
+            company: "ASV Telefonica",
+            position: "Full-Stack Engineer",
+            modality: "Remote",
+            startDate: "April 2025",
+            endDate: "Present",
+            description: "Built the complete ASV Telefonica system with a 5-person team: public website, admin panel, quotation catalog, and contact flow using Angular, Elysia (Bun), and PostgreSQL. Owned all DevOps (Docker, Dokploy, VPS, DNS) and led SEO and Core Web Vitals improvements including an 85% gain in First Contentful Paint.",
+            technologies: [
+                { icon: BiLogoAngular , label: "Angular" },
+                { icon: BiLogoTypescript, label: "TypeScript" },
+                { icon: SiPostgresql, label: "PostgreSQL" },
+                { icon: BiLogoDocker , label: "Docker" },
+            ]
+        },
         {
             company: "Intercert Latam",
             position: "Software Engineer Intern",
@@ -51,6 +65,20 @@ export default function EmploymentSection(){
             ]
         }
     ] : [
+        {
+            company: "ASV Telefonica",
+            position: "Ingeniero de Software Full-Stack",
+            modality: "Remoto",
+            startDate: "Abril 2025",
+            endDate: "Presente",
+            description: "Construí el sistema completo de ASV Telefonica con un equipo de 5 personas: sitio público, panel de administración, catálogo de cotizaciones y formulario de contacto usando Angular, Elysia (Bun) y PostgreSQL. Fui responsable de todo el DevOps (Docker, Dokploy, VPS, DNS) y lideré mejoras de SEO y Core Web Vitals, incluyendo una mejora del 85% en First Contentful Paint.",
+            technologies: [
+                { icon: BiLogoAngular , label: "Angular" },
+                { icon: BiLogoTypescript, label: "TypeScript" },
+                { icon: SiPostgresql, label: "PostgreSQL" },
+                { icon: BiLogoDocker , label: "Docker" },
+            ]
+        },
         {
             company: "Intercert Latam",
             position: "Ingeniero de Software Practicante",

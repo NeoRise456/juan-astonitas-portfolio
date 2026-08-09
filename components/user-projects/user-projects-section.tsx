@@ -14,6 +14,16 @@ export default async function UserProjectsSection(){
 
     const userProjects = [
         {
+            name: 'CHRONO_OS',
+            description: (locale === 'en' ? 'A personal productivity app for habit tracking, task management, and weekly scheduling. Habit streaks with a weekly shield, consistency and focus analytics, GitHub-style density heatmap, and drag-and-drop weekly timetable. Built from scratch in two weeks.'
+            : 'Una app de productividad personal para seguimiento de hábitos, gestión de tareas y planificación semanal. Rachas de hábitos con escudo semanal, analíticas de consistencia y enfoque, mapa de densidad estilo GitHub y horario semanal con drag-and-drop. Construida desde cero en dos semanas.'),
+            shortDescription: (locale === 'en' ? 'personal productivity app' : 'app de productividad personal'),
+            url: 'https://chrono-os.neorise.cloud/',
+            img: '/projects/chrono-os.png',
+            sourceCode: 'https://github.com/NeoRise456/chrono-os',
+            technologies: ['Next.js', 'Convex','Better Auth','Tailwind'],
+        },
+        {
             name: 'CloudNRG',
             description: (locale === 'en' ? 'A blob storage service that allows you to upload, download and delete files.' :
                 'Un servicio de almacenamiento de blobs que te permite subir, descargar y eliminar archivos.'),
@@ -21,16 +31,6 @@ export default async function UserProjectsSection(){
             img: '/projects/cloudnrg.png',
             sourceCode: 'https://github.com/orgs/NRG-5/repositories',
             technologies: ['Next.js','Spring Boot','Docker','Ngrok'],
-        },
-        {
-            name: 'Tech Interpretations',
-            description: (locale === 'en' ? 'A glossary of tech terms where you can create,edit and delete explanations of acronyms.'
-            : 'Un glosario de términos tecnológicos donde puedes crear, editar y eliminar explicaciones de acrónimos.'),
-            shortDescription: (locale === 'en' ? 'A glossary of tech terms' : 'Glosario de términos tecnológicos'),
-            url: 'https://neo-nextjs-simple-crud-app.onrender.com',
-            img: '/projects/tech-interpretations.png',
-            sourceCode: 'https://github.com/NeoRise456/NextJS-CRUD-App',
-            technologies: ['Next.js', 'AppWrite','Render'],
         }
     ]
 

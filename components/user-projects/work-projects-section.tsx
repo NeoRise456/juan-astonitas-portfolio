@@ -10,6 +10,17 @@ export default async function WorkProjectsSection(){
 
     const workProjects = [
         {
+            name: 'ASV Telefonica',
+            description: ( locale === 'en' ?
+                    'Full system for ASV Telefonica built with a 5-person team: public website, admin panel, quotation catalog, and contact flow using Angular, Elysia (Bun), and PostgreSQL. I owned all DevOps (Docker, Dokploy, VPS, DNS) and led SEO and Core Web Vitals improvements including an 85% gain in First Contentful Paint.'
+                    : 'Sistema completo para ASV Telefonica construido con un equipo de 5 personas: sitio público, panel de administración, catálogo de cotizaciones y formulario de contacto usando Angular, Elysia (Bun) y PostgreSQL. Fui dueño de todo el DevOps (Docker, Dokploy, VPS, DNS) y lideré mejoras de SEO y Core Web Vitals, incluyendo una mejora del 85% en First Contentful Paint.'
+            ),
+            shortDescription: (locale === 'en' ? 'full system + DevOps' : 'sistema completo + DevOps'),
+            url: 'https://www.asvtelefonica.com/',
+            img: '/projects/asvtelefonica.png',
+            technologies: ['Angular','Elysia','PostgreSQL','Docker','Dokploy'],
+        },
+        {
             name: 'Intercert Peru website',
             description: ( locale === 'en' ?
                     'website for Intercert Peru, an iso certification company. It includes a presentation of the company, its services, a contact form and the partnership program.'
@@ -20,17 +31,6 @@ export default async function WorkProjectsSection(){
             img: '/projects/intercert-peru.png',
             technologies: ['Next.js','Prisma','Resend','Vercel'],
 
-        },
-        {
-            name: 'ISO Cert. System ',
-            description: ( locale === 'en' ?
-                    'A certificate verification page for Intercert Peru, allowing users to verify the authenticity of their iso certificates entering the certificate register number.'
-                    : 'Una página de verificación de certificados para Intercert Peru, que permite a los usuarios verificar la autenticidad de sus certificados iso ingresando el número de registro del certificado.'
-            ),
-            shortDescription: (locale === 'en' ? 'certification verify page' : 'página de verificación de certificados'),
-            url: 'https://intercert-verify-certificate-page.vercel.app/',
-            img: '/projects/intercert-verify.png',
-            technologies: ['Next.js','Postgres','Prisma','Vercel'],
         }
     ]
 
