@@ -30,6 +30,7 @@ export default function ProjectCard({project} : {
                         alt={project.name}
                         quality={100}
                         fill
+                        sizes="(max-width: 640px) 100vw, 50vw"
                     />
                 </div>
 

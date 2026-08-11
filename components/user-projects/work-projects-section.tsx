@@ -21,15 +21,15 @@ export default async function WorkProjectsSection(){
             technologies: ['Angular','Elysia','PostgreSQL','Docker','Dokploy'],
         },
         {
-            name: 'Intercert Peru website',
+            name: 'Quality Dent Peru',
             description: ( locale === 'en' ?
-                    'website for Intercert Peru, an iso certification company. It includes a presentation of the company, its services, a contact form and the partnership program.'
-                    : 'sitio web para Intercert Peru, una empresa de certificación iso. Incluye una presentación de la empresa, sus servicios, un formulario de contacto y el programa de asociación.'
+                    'Website for Quality Dent, a dental clinic in San Miguel, Lima with 20+ years of experience. Single-page marketing site presenting the clinic, its services (implants, orthodontics, cleaning, prosthetics, extractions), a patient testimonial, and a contact form with WhatsApp booking.'
+                    : 'Sitio web para Quality Dent, una clínica dental en San Miguel, Lima con más de 20 años de experiencia. Sitio de una sola página que presenta la clínica, sus servicios (implantes, ortodoncia, limpieza, prótesis, extracciones), un testimonio de paciente y un formulario de contacto con reserva por WhatsApp.'
             ),
-            shortDescription: (locale === 'en' ? 'website for Intercert Peru' : 'sitio web para Intercert Peru'),
-            url: 'https://www.intercert.com.pe/',
-            img: '/projects/intercert-peru.png',
-            technologies: ['Next.js','Prisma','Resend','Vercel'],
+            shortDescription: (locale === 'en' ? 'dental clinic website' : 'sitio web de clínica dental'),
+            url: 'https://qualitydentperu.com/',
+            img: '/projects/quality-dent.png',
+            technologies: ['Next.js','Tailwind','shadcn/ui','Resend'],
 
         }
     ]

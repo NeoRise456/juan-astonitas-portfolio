@@ -46,6 +46,7 @@ export const StarsBackground: React.FC<StarBackgroundProps> = ({
 
   const canvasRef: RefObject<HTMLCanvasElement | null> =
     useRef<HTMLCanvasElement>(null);
+  const lastSize = useRef<{ w: number; h: number }>({ w: 0, h: 0 });
 
   const generateStars = useCallback(
     (width: number, height: number): StarProps[] => {
@@ -88,9 +89,15 @@ export const StarsBackground: React.FC<StarBackgroundProps> = ({
         if (!ctx) return;
 
         const { width, height } = canvas.getBoundingClientRect();
-        canvas.width = width;
-        canvas.height = height;
-        setStars(generateStars(width, height));
+        // ponytail: ignore sub-pixel/scrollbar size jitter (e.g. Radix Dialog body scroll lock)
+        // so stars don't regenerate on open/close. Regenerate only on real resize.
+        const w = Math.round(width);
+        const h = Math.round(height);
+        if (w === lastSize.current.w && h === lastSize.current.h) return;
+        lastSize.current = { w, h };
+        canvas.width = w;
+        canvas.height = h;
+        setStars(generateStars(w, h));
       }
     };
 
@@ -106,6 +113,7 @@ export const StarsBackground: React.FC<StarBackgroundProps> = ({
         resizeObserver.unobserve(canvasRef.current);
       }
     };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [
     starDensity,
     allStarsTwinkle,

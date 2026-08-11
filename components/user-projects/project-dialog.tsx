@@ -49,6 +49,7 @@ export default async function ProjectDialog({project} : {
                         alt={project.name}
                         quality={100}
                         fill
+                        sizes="(max-width: 768px) 100vw, 50vw"
                         className={`object-cover `}
                     />
                 </div>
