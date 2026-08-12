@@ -33,7 +33,7 @@ export default function PortfolioFooter(){
                             size={26}/>
                     </Link>
                 </div>
-                <span className={`text-muted-foreground`}> Juan Astonitas | 2025 </span>
+                <span className={`text-muted-foreground`}> Juan Astonitas | 2026 </span>
             </div>
 
             <div className={`${evaFont.className} uppercase text-4xl sm:text-5xl md:text-6xl text-nowrap text-center flex overflow-hidden max-w-2xl`}>
