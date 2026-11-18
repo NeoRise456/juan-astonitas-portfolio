@@ -99,7 +99,7 @@ export const experience: Experience[] = [
         position: {en: "Full-Stack Engineer", es: "Ingeniero de Software Full-Stack"},
         modality: {en: "Remote", es: "Remoto"},
         location: "Lima, Peru",
-        start: {year: 2026, month: 4},
+        start: {year: 2025, month: 4},
         end: {year: 2026, month: 8},
         description: {
             en: "Built the complete ASV Telefonica system with a 5-person team: public website, admin panel, quotation catalog, and contact flow using Angular, Elysia, and PostgreSQL. Owned all DevOps (Docker, Dokploy, VPS, DNS) and led SEO and Core Web Vitals improvements including an 85% gain in First Contentful Paint.",
