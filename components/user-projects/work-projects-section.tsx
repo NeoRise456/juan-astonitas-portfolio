@@ -1,6 +1,7 @@
 "use server";
 
 import ProjectDialog from "@/components/user-projects/project-dialog";
+import WorkCarousel from "@/components/user-projects/work-carousel";
 import {getLocale, getTranslations} from "next-intl/server";
 
 export default async function WorkProjectsSection(){
@@ -9,6 +10,17 @@ export default async function WorkProjectsSection(){
     const locale = await getLocale();
 
     const workProjects = [
+        {
+            name: 'Chiki Pro',
+            description: ( locale === 'en' ?
+                    'Bilingual catalog site for Chiki Pro, a premium trading-card accessories brand. Products, distributors and page content are managed through Payload CMS, with contact and partner forms. Freelance project where I also own all the infrastructure: Hostinger VPS with Dokploy, PostgreSQL, SeaweedFS as the main S3 media storage, MinIO for backups, and the domain email.'
+                    : 'Sitio catálogo bilingüe para Chiki Pro, una marca premium de accesorios para trading cards. Los productos, distribuidores y contenido se gestionan desde Payload CMS, con formularios de contacto y partners. Proyecto freelance donde también administro toda la infraestructura: VPS en Hostinger con Dokploy, PostgreSQL, SeaweedFS como S3 principal para media, MinIO para backups y el correo del dominio.'
+            ),
+            shortDescription: (locale === 'en' ? 'TCG catalog + full infra' : 'catálogo TCG + infra completa'),
+            url: 'https://chikipro.com/',
+            img: '/projects/chiki-pro.png',
+            technologies: ['Next.js','Payload CMS','PostgreSQL','SeaweedFS','MinIO','Dokploy'],
+        },
         {
             name: 'ASV Telefonica',
             description: ( locale === 'en' ?
@@ -36,19 +48,20 @@ export default async function WorkProjectsSection(){
 
     return (
         <section className={`relative mb-8`}>
-            <div className={`mb-3`}>
-                <h2 className={`text-sm uppercase tracking-wider `}>{t('title')}</h2>
-                <p className={`text-muted-foreground text-xs`}> {t('subtitle')} </p>
-            </div>
-
-
-            <div className={`grid grid-cols-1 sm:grid-cols-2 gap-1`}>
+            <WorkCarousel
+                header={
+                    <div>
+                        <h2 className={`text-sm uppercase tracking-wider `}>{t('title')}</h2>
+                        <p className={`text-muted-foreground text-xs`}> {t('subtitle')} </p>
+                    </div>
+                }
+            >
                 {
                     workProjects.map((project, index) => (
                         <ProjectDialog project={project} key={index} />
                     ))
                 }
-            </div>
+            </WorkCarousel>
 
         </section>
     );

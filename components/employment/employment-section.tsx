@@ -9,7 +9,8 @@ import {
     BiLogoTailwindCss,
     BiLogoTypescript
 } from "react-icons/bi";
-import { SiGooglemeet, SiPostgresql } from "react-icons/si";
+import { SiGooglemeet, SiNestjs, SiPayloadcms, SiPostgresql } from "react-icons/si";
+import { FaAws } from "react-icons/fa";
 import { IoIosArrowDown } from "react-icons/io";
 import MainEmploymentCard from "@/components/employment/main-employment-card";
 import {useState} from "react";
@@ -24,6 +25,35 @@ export default function EmploymentSection(){
     const locale = useLocale();
 
     const employmentList = locale === 'en' ? [
+        {
+            company: "UPC",
+            position: "Full-Stack Developer",
+            modality: "Remote",
+            startDate: "August 2026",
+            endDate: "Present",
+            description: "Developing an internal accreditation audit platform for the Faculty of Engineering at Universidad Peruana de Ciencias Aplicadas. It validates ABET course portfolios stored in S3 against the official guidelines, cross-checks syllabi with the curriculum, runs AI content review, and issues signed audit certificates. Built with Next.js, NestJS, Prisma and PostgreSQL on AWS (RDS, S3), deployed with Docker.",
+            technologies: [
+                { icon: RiNextjsFill , label: "Next.js" },
+                { icon: SiNestjs , label: "NestJS" },
+                { icon: FaAws , label: "AWS" },
+                { icon: SiPostgresql, label: "PostgreSQL" },
+                { icon: BiLogoDocker , label: "Docker" },
+            ]
+        },
+        {
+            company: "Chiki Pro",
+            position: "Freelance Full-Stack Developer",
+            modality: "Remote",
+            startDate: "August 2026",
+            endDate: "Present",
+            description: "Built and run the catalog site for Chiki Pro, a premium TCG accessories brand: a bilingual Next.js site with Payload CMS for products, distributors and page content. I own the whole infrastructure: Hostinger VPS managed with Dokploy, PostgreSQL, SeaweedFS as the main S3 storage with MinIO for backups, and the domain's email.",
+            technologies: [
+                { icon: RiNextjsFill , label: "Next.js" },
+                { icon: SiPayloadcms , label: "Payload CMS" },
+                { icon: SiPostgresql, label: "PostgreSQL" },
+                { icon: BiLogoDocker , label: "Docker" },
+            ]
+        },
         {
             company: "ASV Telefonica",
             position: "Full-Stack Engineer",
@@ -65,6 +95,35 @@ export default function EmploymentSection(){
             ]
         }
     ] : [
+        {
+            company: "UPC",
+            position: "Desarrollador Full-Stack",
+            modality: "Remoto",
+            startDate: "Agosto 2026",
+            endDate: "Actualidad",
+            description: "Desarrollo una plataforma interna de auditoría de acreditación para la Facultad de Ingeniería de la Universidad Peruana de Ciencias Aplicadas. Valida los portafolios de cursos ABET almacenados en S3 contra el lineamiento oficial, contrasta sílabos con la malla curricular, ejecuta revisión de contenido con IA y emite actas de auditoría firmadas. Construida con Next.js, NestJS, Prisma y PostgreSQL sobre AWS (RDS, S3), desplegada con Docker.",
+            technologies: [
+                { icon: RiNextjsFill , label: "Next.js" },
+                { icon: SiNestjs , label: "NestJS" },
+                { icon: FaAws , label: "AWS" },
+                { icon: SiPostgresql, label: "PostgreSQL" },
+                { icon: BiLogoDocker , label: "Docker" },
+            ]
+        },
+        {
+            company: "Chiki Pro",
+            position: "Desarrollador Full-Stack Freelance",
+            modality: "Remoto",
+            startDate: "Agosto 2026",
+            endDate: "Actualidad",
+            description: "Construí y administro el sitio catálogo de Chiki Pro, una marca premium de accesorios TCG: un sitio bilingüe en Next.js con Payload CMS para productos, distribuidores y contenido. Soy responsable de toda la infraestructura: VPS en Hostinger gestionado con Dokploy, PostgreSQL, SeaweedFS como S3 principal con MinIO para backups, y el correo del dominio.",
+            technologies: [
+                { icon: RiNextjsFill , label: "Next.js" },
+                { icon: SiPayloadcms , label: "Payload CMS" },
+                { icon: SiPostgresql, label: "PostgreSQL" },
+                { icon: BiLogoDocker , label: "Docker" },
+            ]
+        },
         {
             company: "ASV Telefonica",
             position: "Ingeniero de Software Full-Stack",

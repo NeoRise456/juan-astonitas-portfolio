@@ -9,12 +9,12 @@
   },
   "User": {
     "greeting": "Hi, I am",
-    "description": "a Software Engineer, specialized in building detailed web applications, services and automations.",
+    "description": "a Full-Stack Software Engineer with nearly 2 years of experience building production web apps end to end, from the UI and APIs to the servers they run on.",
     "cv": "Resume (en)",
     "cvLink": "https://docs.google.com/document/d/1LHoP0U7zwe8Fj1mPEH6Czh0mkgnZOQ8e/edit?usp=sharing&ouid=109113853729909714454&rtpof=true&sd=true"
   },
   "Employment" : {
-    "title": "Last Position",
+    "title": "Current Position",
     "subtitle": "Previous Experience"
   },
   "Work" : {
