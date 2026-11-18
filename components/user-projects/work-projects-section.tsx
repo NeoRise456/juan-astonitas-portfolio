@@ -24,8 +24,8 @@ export default async function WorkProjectsSection(){
         {
             name: 'ASV Telefonica',
             description: ( locale === 'en' ?
-                    'Full system for ASV Telefonica built with a 5-person team: public website, admin panel, quotation catalog, and contact flow using Angular, Elysia (Bun), and PostgreSQL. I owned all DevOps (Docker, Dokploy, VPS, DNS) and led SEO and Core Web Vitals improvements including an 85% gain in First Contentful Paint.'
-                    : 'Sistema completo para ASV Telefonica construido con un equipo de 5 personas: sitio público, panel de administración, catálogo de cotizaciones y formulario de contacto usando Angular, Elysia (Bun) y PostgreSQL. Fui dueño de todo el DevOps (Docker, Dokploy, VPS, DNS) y lideré mejoras de SEO y Core Web Vitals, incluyendo una mejora del 85% en First Contentful Paint.'
+                    'Full system for ASV Telefonica built with a 5-person team: public website, admin panel, quotation catalog, and contact flow using Angular, Elysia, and PostgreSQL. I owned all DevOps (Docker, Dokploy, VPS, DNS) and led SEO and Core Web Vitals improvements including an 85% gain in First Contentful Paint.'
+                    : 'Sistema completo para ASV Telefonica construido con un equipo de 5 personas: sitio público, panel de administración, catálogo de cotizaciones y formulario de contacto usando Angular, Elysia y PostgreSQL. Fui dueño de todo el DevOps (Docker, Dokploy, VPS, DNS) y lideré mejoras de SEO y Core Web Vitals, incluyendo una mejora del 85% en First Contentful Paint.'
             ),
             shortDescription: (locale === 'en' ? 'full system + DevOps' : 'sistema completo + DevOps'),
             url: 'https://www.asvtelefonica.com/',

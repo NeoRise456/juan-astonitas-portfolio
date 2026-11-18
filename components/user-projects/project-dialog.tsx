@@ -42,18 +42,19 @@ export default async function ProjectDialog({project} : {
             <DialogTrigger asChild>
                 <ProjectCard project={project} />
             </DialogTrigger>
-            <DialogContent className={`grid grid-cols-1 sm:grid-cols-2 p-0 gap-0 max-w-7/8 md:max-w-2xl max-h-[90dvh] overflow-y-auto`}>
-                <div className={`relative aspect-[16/9] overflow-hidden rounded-t-lg border-b sm:aspect-auto sm:rounded-t-none sm:rounded-l-lg sm:border-b-0 sm:border-r`}>
+            <DialogContent className={`flex flex-col p-0 gap-0 overflow-y-auto max-h-[90dvh] max-w-[calc(100%-2rem)] sm:max-w-2xl lg:max-w-3xl ` +
+                `[&>button:last-child]:rounded-md [&>button:last-child]:bg-background/80 [&>button:last-child]:p-1 [&>button:last-child]:opacity-100 [&>button:last-child]:backdrop-blur-sm`}>
+                <div className={`relative aspect-[16/9] w-full shrink-0 overflow-hidden rounded-t-lg border-b`}>
                     <Image
                         src={project.img}
                         alt={project.name}
                         quality={100}
                         fill
-                        sizes="(max-width: 768px) 100vw, 50vw"
-                        className={`object-cover `}
+                        sizes="(max-width: 640px) 100vw, 768px"
+                        className={`object-cover object-top`}
                     />
                 </div>
-                <div className={`p-5 sm:p-6 flex flex-col justify-between gap-4`}>
+                <div className={`p-5 sm:p-6 flex flex-col gap-4`}>
                     <DialogHeader className={`text-left`}>
                         <DialogTitle>{project.name}</DialogTitle>
                         <DialogDescription>{project.description}</DialogDescription>

@@ -102,18 +102,18 @@ export const experience: Experience[] = [
         start: {year: 2026, month: 4},
         end: {year: 2026, month: 8},
         description: {
-            en: "Built the complete ASV Telefonica system with a 5-person team: public website, admin panel, quotation catalog, and contact flow using Angular, Elysia (Bun), and PostgreSQL. Owned all DevOps (Docker, Dokploy, VPS, DNS) and led SEO and Core Web Vitals improvements including an 85% gain in First Contentful Paint.",
-            es: "Construí el sistema completo de ASV Telefonica con un equipo de 5 personas: sitio público, panel de administración, catálogo de cotizaciones y formulario de contacto usando Angular, Elysia (Bun) y PostgreSQL. Fui responsable de todo el DevOps (Docker, Dokploy, VPS, DNS) y lideré mejoras de SEO y Core Web Vitals, incluyendo una mejora del 85% en First Contentful Paint.",
+            en: "Built the complete ASV Telefonica system with a 5-person team: public website, admin panel, quotation catalog, and contact flow using Angular, Elysia, and PostgreSQL. Owned all DevOps (Docker, Dokploy, VPS, DNS) and led SEO and Core Web Vitals improvements including an 85% gain in First Contentful Paint.",
+            es: "Construí el sistema completo de ASV Telefonica con un equipo de 5 personas: sitio público, panel de administración, catálogo de cotizaciones y formulario de contacto usando Angular, Elysia y PostgreSQL. Fui responsable de todo el DevOps (Docker, Dokploy, VPS, DNS) y lideré mejoras de SEO y Core Web Vitals, incluyendo una mejora del 85% en First Contentful Paint.",
         },
         bullets: {
             en: [
                 "Owned all DevOps for a 5-engineer team: Dockerized services, Dokploy orchestration, VPS provisioning, and DNS/domain management keeping the platform live in production.",
-                "Built the complete ASV Telefonica system with a 5-person team: public website, admin panel, quotation catalog, and contact flow using Angular, Elysia (Bun), and PostgreSQL.",
+                "Built the complete ASV Telefonica system with a 5-person team: public website, admin panel, quotation catalog, and contact flow using Angular, Elysia, and PostgreSQL.",
                 "Improved SEO and Core Web Vitals, achieving an 85% improvement in First Contentful Paint (FCP) through rendering, asset, and build optimizations.",
             ],
             es: [
                 "Fui responsable de todo el DevOps de un equipo de 5 ingenieros: servicios con Docker, orquestación con Dokploy, provisión de VPS y gestión de DNS/dominios manteniendo la plataforma en producción.",
-                "Construí el sistema completo de ASV Telefonica con un equipo de 5 personas: sitio público, panel de administración, catálogo de cotizaciones y formulario de contacto usando Angular, Elysia (Bun) y PostgreSQL.",
+                "Construí el sistema completo de ASV Telefonica con un equipo de 5 personas: sitio público, panel de administración, catálogo de cotizaciones y formulario de contacto usando Angular, Elysia y PostgreSQL.",
                 "Mejoré el SEO y los Core Web Vitals, logrando una mejora del 85% en First Contentful Paint (FCP) mediante optimizaciones de renderizado, assets y build.",
             ],
         },
@@ -215,8 +215,8 @@ export const skills: { label: Localized; items: Localized }[] = [
     {
         label: {en: "Backend", es: "Backend"},
         items: {
-            en: "Node.js, NestJS, Elysia (Bun), Spring Boot, REST APIs, Payload CMS, Convex",
-            es: "Node.js, NestJS, Elysia (Bun), Spring Boot, APIs REST, Payload CMS, Convex",
+            en: "Node.js, NestJS, Elysia, Spring Boot, REST APIs, Payload CMS, Convex",
+            es: "Node.js, NestJS, Elysia, Spring Boot, APIs REST, Payload CMS, Convex",
         },
     },
     {

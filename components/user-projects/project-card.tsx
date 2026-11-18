@@ -31,6 +31,7 @@ export default function ProjectCard({project} : {
                         quality={100}
                         fill
                         sizes="(max-width: 640px) 128px, 50vw"
+                        className={`object-cover object-top`}
                     />
                 </div>
 
