@@ -1,3 +1,4 @@
+import type {IconType} from "react-icons";
 import React from "react";
 import {cn} from "@/lib/utils";
 import {Tooltip, TooltipContent, TooltipTrigger} from "@/components/ui/tooltip";
@@ -10,7 +11,7 @@ export default function PastEmploymentCard({employment,style,className} : {
         startDate: string;
         endDate: string;
         description?: string;
-        technologies: { icon: any; label: string }[];
+        technologies: { icon: IconType; label: string }[];
     };
     style?: React.CSSProperties;
     className?: string;

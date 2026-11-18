@@ -6,7 +6,7 @@ import {cn} from "@/lib/utils";
 
 const GAP = 4;
 
-export default function WorkCarousel({header, children}: { header: ReactNode; children: ReactNode }) {
+export default function CardCarousel({header, children}: { header: ReactNode; children: ReactNode }) {
     const trackRef = useRef<HTMLDivElement>(null);
     const items = Children.toArray(children);
     const [page, setPage] = useState(0);
@@ -54,7 +54,7 @@ export default function WorkCarousel({header, children}: { header: ReactNode; ch
             <div className={`mb-3 flex items-end justify-between gap-4`}>
                 {header}
                 {pages > 1 && (
-                    <div className={`flex shrink-0 gap-1`}>
+                    <div className={`hidden shrink-0 gap-1 sm:flex`}>
                         <button type="button" aria-label="Previous" className={arrowClass}
                                 onClick={() => goTo(page - 1)} disabled={page <= 0}>
                             <IoIosArrowBack size={12}/>
@@ -69,17 +69,17 @@ export default function WorkCarousel({header, children}: { header: ReactNode; ch
 
             <div
                 ref={trackRef}
-                className={`-my-1 flex snap-x snap-mandatory gap-1 overflow-x-auto py-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden`}
+                className={`flex flex-col gap-1 sm:-my-1 sm:snap-x sm:snap-mandatory sm:flex-row sm:overflow-x-auto sm:py-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden`}
             >
                 {items.map((item, index) => (
-                    <div key={index} className={`flex shrink-0 basis-full snap-start sm:basis-[calc(50%-2px)] *:w-full`}>
+                    <div key={index} className={`flex *:w-full sm:shrink-0 sm:snap-start sm:basis-[calc(50%-2px)]`}>
                         {item}
                     </div>
                 ))}
             </div>
 
             {pages > 1 && (
-                <div className={`mt-2 flex justify-center gap-1.5`}>
+                <div className={`mt-2 hidden justify-center gap-1.5 sm:flex`}>
                     {Array.from({length: pages}).map((_, index) => (
                         <button
                             key={index}

@@ -8,11 +8,18 @@ import {
     BiLogoDocker,
     BiLogoReact,
     BiLogoPostgresql,
-    BiLogoGit, BiLogoPython
 } from "react-icons/bi";
+import {SiNestjs} from "react-icons/si";
+import type {IconBaseProps} from "react-icons";
+import {cn} from "@/lib/utils";
 import {RiNextjsFill} from "react-icons/ri";
 import {getTranslations} from "next-intl/server";
 
+
+// Simple Icons fill their whole box while BoxIcons have built-in padding; inset it to match.
+function NestJsIcon(props: IconBaseProps) {
+    return <SiNestjs {...props} className={cn(props.className, "p-1")}/>;
+}
 
 const technologies = [
     { icon: RiNextjsFill , label: "Next.js" },
@@ -21,7 +28,7 @@ const technologies = [
     { icon: BiLogoPostgresql, label: "PostgreSQL" },
     { icon: BiLogoDocker, label: "Docker" },
     { icon: BiLogoReact , label: "React"},
-    { icon: BiLogoPython , label: "Python"},
+    { icon: NestJsIcon , label: "NestJS"},
 ];
 
 export default async function MainTechnologiesSection(){

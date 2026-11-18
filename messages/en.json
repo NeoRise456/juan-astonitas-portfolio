@@ -9,9 +9,8 @@
   },
   "User": {
     "greeting": "Hi, I am",
-    "description": "a Full-Stack Software Engineer with nearly 2 years of experience building production web apps end to end, from the UI and APIs to the servers they run on.",
-    "cv": "Resume (en)",
-    "cvLink": "https://docs.google.com/document/d/1LHoP0U7zwe8Fj1mPEH6Czh0mkgnZOQ8e/edit?usp=sharing&ouid=109113853729909714454&rtpof=true&sd=true"
+    "description": "a Full-Stack Software Engineer with 2 years of experience building production web apps end to end, from the UI and APIs to the servers they run on.",
+    "cv": "Resume (en)"
   },
   "Employment" : {
     "title": "Current Position",
@@ -19,11 +18,11 @@
   },
   "Work" : {
     "title" : "Work",
-    "subtitle" : "projects i was hired to do/work on"
+    "subtitle" : "projects i was hired to build"
   },
   "Projects" : {
     "title" : "Projects",
-    "subtitle" : "i like to code stuff :D",
+    "subtitle" : "things i build on my own time",
     "sourceCode": "source code",
     "liveWebsite": "website"
   },

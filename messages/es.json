@@ -9,9 +9,8 @@
   },
   "User": {
     "greeting": "Hola, soy",
-    "description": "ingeniero de software full-stack con casi 2 años de experiencia construyendo aplicaciones web en producción de punta a punta, desde la interfaz y las APIs hasta los servidores donde corren.",
-    "cv": "Currículum (es)",
-    "cvLink": "https://docs.google.com/document/d/19rHeI9bjbVP0cPvsKsAC4k6R-T6eK3su/edit?usp=sharing&ouid=109113853729909714454&rtpof=true&sd=true"
+    "description": "ingeniero de software full-stack con 2 años de experiencia construyendo aplicaciones web en producción de punta a punta, desde la interfaz y las APIs hasta los servidores donde corren.",
+    "cv": "Currículum (es)"
   },
   "Employment" : {
     "title": "Experiencia",
@@ -19,11 +18,11 @@
   },
   "Work" : {
     "title" : "Mi Trabajo",
-    "subtitle" : "proyectos en los que fui contratado para desarrollar"
+    "subtitle" : "proyectos para los que me contrataron"
   },
   "Projects" : {
     "title" : "Mis Proyectos",
-    "subtitle" : "me gusta programar :D",
+    "subtitle" : "cosas que construyo por mi cuenta",
     "sourceCode": "código fuente",
     "liveWebsite": "ir a web"
   },

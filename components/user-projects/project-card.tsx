@@ -23,19 +23,19 @@ export default function ProjectCard({project} : {
     return (
         <div className={`border text-card-foreground overflow-hidden border-zinc-200 rounded-md bg-zinc-100/30` +
                 `backdrop-blur-xl dark:border-zinc-800 dark:bg-zinc-900/30 cursor-pointer transition-transform ease-in-out duration-150 hover:-translate-y-0.5`}>
-            <div className={`p-0`}>
-                <div className={`relative aspect-[16/9] overflow-hidden`}>
+            <div className={`flex items-center sm:block`}>
+                <div className={`relative aspect-[16/9] w-32 shrink-0 overflow-hidden sm:w-auto`}>
                     <Image
                         src={project.img}
                         alt={project.name}
                         quality={100}
                         fill
-                        sizes="(max-width: 640px) 100vw, 50vw"
+                        sizes="(max-width: 640px) 128px, 50vw"
                     />
                 </div>
 
 
-                <div className={`p-2 flex items-start relative`}>
+                <div className={`p-2 flex min-w-0 items-start relative`}>
                     <div>
                         <h3 className={`text-sm from-black from-30% to-black/50 dark:from-white dark:from-30% dark:to-white/50 bg-clip-text`}>
                             {project.name}

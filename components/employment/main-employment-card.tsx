@@ -1,3 +1,4 @@
+import type {IconType} from "react-icons";
 import {
     Tooltip,
     TooltipContent,
@@ -13,7 +14,7 @@ export default function MainEmploymentCard({employment} : {
         startDate: string;
         endDate: string;
         description?: string;
-        technologies: { icon: any; label: string }[];
+        technologies: { icon: IconType; label: string }[];
     };
 }){
     return (

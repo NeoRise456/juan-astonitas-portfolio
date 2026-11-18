@@ -1,6 +1,7 @@
 "use server";
 
 import ProjectDialog from "@/components/user-projects/project-dialog";
+import CardCarousel from "@/components/user-projects/card-carousel";
 import {getLocale, getTranslations} from "next-intl/server";
 
 
@@ -14,14 +15,13 @@ export default async function UserProjectsSection(){
 
     const userProjects = [
         {
-            name: 'CHRONO_OS',
-            description: (locale === 'en' ? 'A personal productivity app for habit tracking, task management, and weekly scheduling. Habit streaks with a weekly shield, consistency and focus analytics, GitHub-style density heatmap, and drag-and-drop weekly timetable. Built from scratch in two weeks.'
-            : 'Una app de productividad personal para seguimiento de hábitos, gestión de tareas y planificación semanal. Rachas de hábitos con escudo semanal, analíticas de consistencia y enfoque, mapa de densidad estilo GitHub y horario semanal con drag-and-drop. Construida desde cero en dos semanas.'),
-            shortDescription: (locale === 'en' ? 'personal productivity app' : 'app de productividad personal'),
-            url: 'https://chrono-os.neorise.cloud/',
-            img: '/projects/chrono-os.png',
-            sourceCode: 'https://github.com/NeoRise456/chrono-os',
-            technologies: ['Next.js', 'Convex','Better Auth','Tailwind'],
+            name: "Neo's Planner",
+            description: (locale === 'en' ? 'Local-first desktop planner where everything is a task. Routines generate one task per occurrence over a fixed period, protocols hold reusable step lists, and consistency is tracked as done ÷ (done + missed). Todo, week/month calendar, routines and protocols views on SQLite via PowerSync, with the domain rules in a tested TypeScript core package. v0.1 ships as a Windows installer; the Android app and sync are next.'
+            : 'Planificador de escritorio local-first donde todo es una tarea. Las rutinas generan una tarea por ocurrencia dentro de un periodo fijo, los protocolos guardan listas de pasos reutilizables y la consistencia se mide como hechas ÷ (hechas + perdidas). Vistas de pendientes, calendario semanal/mensual, rutinas y protocolos sobre SQLite con PowerSync, con las reglas de dominio en un paquete core de TypeScript con tests. La v0.1 se distribuye como instalador para Windows; la app Android y la sincronización vienen después.'),
+            shortDescription: (locale === 'en' ? 'local-first desktop planner' : 'planificador de escritorio local-first'),
+            img: '/projects/neos-own-planner.png',
+            sourceCode: 'https://github.com/NeoRise456/neos-own-planner',
+            technologies: ['Tauri','React','TypeScript','SQLite','PowerSync'],
         },
         {
             name: 'CloudNRG',
@@ -31,22 +31,34 @@ export default async function UserProjectsSection(){
             img: '/projects/cloudnrg.png',
             sourceCode: 'https://github.com/orgs/NRG-5/repositories',
             technologies: ['Next.js','Spring Boot','Docker','Ngrok'],
+        },
+        {
+            name: "Neo's Postgres Emulator",
+            description: (locale === 'en' ? 'Client-side PostgreSQL playground that runs entirely in the browser with PGlite (Postgres compiled to WebAssembly), no server needed. SQL editor with syntax highlighting and autocompletion, results as a grid or JSON with execution time, a schema inspector, an auto-generated ERD from foreign keys, query history, SQL import/export, and a database that persists in browser storage.'
+            : 'Playground de PostgreSQL del lado del cliente que corre por completo en el navegador con PGlite (Postgres compilado a WebAssembly), sin servidor. Editor SQL con resaltado y autocompletado, resultados en tabla o JSON con tiempo de ejecución, inspector de esquema, diagrama ERD generado a partir de las llaves foráneas, historial de consultas, importación/exportación de SQL y una base de datos que persiste en el navegador.'),
+            shortDescription: (locale === 'en' ? 'Postgres in the browser (WASM)' : 'Postgres en el navegador (WASM)'),
+            img: '/projects/neo-postgres-emulator-erd.png',
+            sourceCode: 'https://github.com/NeoRise456/Neo-Postgres-Emulator',
+            technologies: ['Next.js','PGlite','WebAssembly','React Flow','Zustand'],
         }
     ]
 
     return (
-        <div className={`relative mb-8`}>
-            <div className={`mb-3`}>
-                <h2 className={`text-sm uppercase tracking-wider `}>{t('title')}</h2>
-                <p className={`text-muted-foreground text-xs`}> {t('subtitle')} </p>
-            </div>
-            <div className={`grid grid-cols-1 sm:grid-cols-2 gap-1`}>
+        <section className={`relative mb-8`}>
+            <CardCarousel
+                header={
+                    <div>
+                        <h2 className={`text-sm uppercase tracking-wider `}>{t('title')}</h2>
+                        <p className={`text-muted-foreground text-xs`}> {t('subtitle')} </p>
+                    </div>
+                }
+            >
                 {
                     userProjects.map((project, index) => (
                         <ProjectDialog project={project} key={index} />
                     ))
                 }
-            </div>
-        </div>
+            </CardCarousel>
+        </section>
     );
 }

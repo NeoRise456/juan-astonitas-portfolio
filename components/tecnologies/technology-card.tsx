@@ -8,7 +8,7 @@ const colorMap = {
     "PostgreSQL": "group-hover:fill-[#2f6792] dark:group-hover:fill-[#2f6792]",
     "Docker": "group-hover:fill-[#1D63ED] dark:group-hover:fill-[#1D63ED]",
     "React": "group-hover:fill-[#61dbfb] dark:group-hover:fill-[#61dbfb]",
-    "Python": "group-hover:fill-[#ffc107] dark:group-hover:fill-[#ffc107]",
+    "NestJS": "group-hover:fill-[#e0234e] dark:group-hover:fill-[#e0234e]",
 } as Record<string, string>;
 
 export default function TechnologyCard({ icon: Icon, label ,className , style }: {icon : ComponentType<{

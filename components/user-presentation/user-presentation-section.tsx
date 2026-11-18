@@ -6,6 +6,7 @@ import {MdMailOutline} from "react-icons/md";
 import ResumeButton from "@/components/user-presentation/resume-button";
 import {getTranslations} from "next-intl/server";
 import Link from "next/link";
+import {profile} from "@/lib/resume-data";
 
 export default async function UserPresentationSection(){
 
@@ -42,7 +43,7 @@ export default async function UserPresentationSection(){
                             className={`transition-all duration-150 hover:text-muted-foreground hover:scale-110`}
                             size={20}/>
                     </Link>
-                    <Link href={`https://www.linkedin.com/in/juan-diego-astonitas-5ba0b425a/`} target={`_blank`}>
+                    <Link href={`https://www.${profile.linkedin}/`} target={`_blank`}>
                         <FiLinkedin
                             className={`transition-all  duration-150 hover:text-muted-foreground hover:scale-110`}
                             size={20}/>

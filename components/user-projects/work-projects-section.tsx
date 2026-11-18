@@ -1,7 +1,7 @@
 "use server";
 
 import ProjectDialog from "@/components/user-projects/project-dialog";
-import WorkCarousel from "@/components/user-projects/work-carousel";
+import CardCarousel from "@/components/user-projects/card-carousel";
 import {getLocale, getTranslations} from "next-intl/server";
 
 export default async function WorkProjectsSection(){
@@ -48,7 +48,7 @@ export default async function WorkProjectsSection(){
 
     return (
         <section className={`relative mb-8`}>
-            <WorkCarousel
+            <CardCarousel
                 header={
                     <div>
                         <h2 className={`text-sm uppercase tracking-wider `}>{t('title')}</h2>
@@ -61,7 +61,7 @@ export default async function WorkProjectsSection(){
                         <ProjectDialog project={project} key={index} />
                     ))
                 }
-            </WorkCarousel>
+            </CardCarousel>
 
         </section>
     );

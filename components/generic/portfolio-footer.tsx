@@ -3,6 +3,7 @@ import { MdMailOutline } from "react-icons/md";
 import { FiGithub } from "react-icons/fi";
 import { FiLinkedin } from "react-icons/fi";
 import Link from "next/link";
+import {profile} from "@/lib/resume-data";
 
 
 const evaFont = localFont({
@@ -22,7 +23,7 @@ export default function PortfolioFooter(){
                             className={`transition-all duration-150 hover:text-muted-foreground hover:scale-110`}
                             size={20}/>
                     </Link>
-                    <Link href={`https://www.linkedin.com/in/juan-diego-astonitas-5ba0b425a/`} target={`_blank`}>
+                    <Link href={`https://www.${profile.linkedin}/`} target={`_blank`}>
                         <FiLinkedin
                             className={`transition-all  duration-150 hover:text-muted-foreground hover:scale-110`}
                             size={20}/>

@@ -42,8 +42,8 @@ export default async function ProjectDialog({project} : {
             <DialogTrigger asChild>
                 <ProjectCard project={project} />
             </DialogTrigger>
-            <DialogContent className={`grid grid-cols-2 p-0 gap-0 max-w-7/8 md:max-w-2xl`}>
-                <div className={`relative  overflow-hidden rounded-l-lg border-r`}>
+            <DialogContent className={`grid grid-cols-1 sm:grid-cols-2 p-0 gap-0 max-w-7/8 md:max-w-2xl max-h-[90dvh] overflow-y-auto`}>
+                <div className={`relative aspect-[16/9] overflow-hidden rounded-t-lg border-b sm:aspect-auto sm:rounded-t-none sm:rounded-l-lg sm:border-b-0 sm:border-r`}>
                     <Image
                         src={project.img}
                         alt={project.name}
@@ -53,8 +53,8 @@ export default async function ProjectDialog({project} : {
                         className={`object-cover `}
                     />
                 </div>
-                <div className={`p-6 flex flex-col justify-between gap-4`}>
-                    <DialogHeader>
+                <div className={`p-5 sm:p-6 flex flex-col justify-between gap-4`}>
+                    <DialogHeader className={`text-left`}>
                         <DialogTitle>{project.name}</DialogTitle>
                         <DialogDescription>{project.description}</DialogDescription>
                         <div className={`flex flex-wrap gap-1`}>
