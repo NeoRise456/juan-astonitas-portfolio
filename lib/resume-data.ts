@@ -21,8 +21,8 @@ export const profile = {
         es: "Ingeniero de Software Full-Stack",
     } satisfies Localized,
     summary: {
-        en: "Full-Stack Software Engineer with 2 years of experience delivering production web systems end to end, from Next.js and NestJS apps to the AWS, Docker and VPS infrastructure they run on. Currently building an internal accreditation audit platform at UPC and running a freelance client's site end to end. Comfortable in remote, English-speaking (C1 IELTS) teams.",
-        es: "Ingeniero de Software Full-Stack con 2 años de experiencia desarrollando sistemas web en producción de extremo a extremo, desde Next.js y NestJS hasta la infraestructura en AWS, Docker y VPS. Actualmente construyo una plataforma interna de auditoría en la UPC y opero el sitio de un cliente freelance. Cómodo en equipos remotos de habla inglesa (C1 IELTS).",
+        en: "Full-Stack Software Engineer with 2 years of experience delivering production web systems end to end, from Next.js and NestJS apps to the AWS, Docker and VPS infrastructure they run on. Currently building an internal accreditation audit platform at UPC and running a freelance client's site end to end. Comfortable in remote, English-speaking teams (IELTS 7.5, C1).",
+        es: "Ingeniero de Software Full-Stack con 2 años de experiencia desarrollando sistemas web en producción de extremo a extremo, desde Next.js y NestJS hasta la infraestructura en AWS, Docker y VPS. Actualmente construyo una plataforma interna de auditoría en la UPC y opero el sitio de un cliente freelance. Cómodo en equipos remotos de habla inglesa (IELTS 7.5, C1).",
     } satisfies Localized,
 };
 
@@ -236,8 +236,8 @@ export const skills: { label: Localized; items: Localized }[] = [
     {
         label: {en: "Spoken languages", es: "Idiomas"},
         items: {
-            en: "Spanish (native), English (C1, IELTS)",
-            es: "Español (nativo), Inglés (C1, IELTS)",
+            en: "Spanish (native), English (C1, IELTS 7.5)",
+            es: "Español (nativo), Inglés (C1, IELTS 7.5)",
         },
     },
 ];
